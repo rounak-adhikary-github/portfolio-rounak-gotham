@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 460" role="img" aria-label="City skyline at night">
+  <title>City skyline</title>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0e13" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#0b0e13" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#0b0e13" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb84d" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#ffb84d" stop-opacity="0"/>
+    </linearGradient>
+    <!-- one window tile, repeated across every tower -->
+    <pattern id="windows" width="26" height="34" patternUnits="userSpaceOnUse">
+      <rect width="26" height="34" fill="none"/>
+      <rect x="5" y="6" width="7" height="10" fill="#ffd766" fill-opacity=".5"/>
+      <rect x="17" y="21" width="7" height="10" fill="#ffd766" fill-opacity=".26"/>
+    </pattern>
+  </defs>
+
+  <!-- sodium-lit haze over the rooftops -->
+  <rect width="1600" height="460" fill="url(#haze)"/>
+
+  <!-- far towers: darkest, just shapes on the skyline -->
+  <g fill="#131820">
+    <rect x="40" y="180" width="96" height="280"/>
+    <rect x="176" y="120" width="70" height="340"/>
+    <rect x="286" y="210" width="120" height="250"/>
+    <rect x="452" y="150" width="84" height="310"/>
+    <rect x="560" y="96" width="66" height="364"/>
+    <rect x="668" y="200" width="104" height="260"/>
+    <rect x="812" y="140" width="78" height="320"/>
+    <rect x="930" y="188" width="112" height="272"/>
+    <rect x="1082" y="112" width="72" height="348"/>
+    <rect x="1194" y="176" width="98" height="284"/>
+    <rect x="1330" y="132" width="80" height="328"/>
+    <rect x="1448" y="200" width="112" height="260"/>
+  </g>
+
+  <!-- windows, only on the far towers -->
+  <g fill="url(#windows)" opacity=".85">
+    <rect x="40" y="180" width="96" height="280"/><rect x="176" y="120" width="70" height="340"/>
+    <rect x="286" y="210" width="120" height="250"/><rect x="452" y="150" width="84" height="310"/>
+    <rect x="560" y="96" width="66" height="364"/><rect x="668" y="200" width="104" height="260"/>
+    <rect x="812" y="140" width="78" height="320"/><rect x="930" y="188" width="112" height="272"/>
+    <rect x="1082" y="112" width="72" height="348"/><rect x="1194" y="176" width="98" height="284"/>
+    <rect x="1330" y="132" width="80" height="328"/><rect x="1448" y="200" width="112" height="260"/>
+  </g>
+
+  <!-- near rooftops, black and closer: a couple with water tanks and aerials -->
+  <g fill="#080a0e">
+    <rect x="-20" y="300" width="150" height="160"/>
+    <rect x="120" y="336" width="90" height="124"/>
+    <rect x="240" y="286" width="130" height="174"/>
+    <rect x="356" y="352" width="104" height="108"/>
+    <rect x="470" y="320" width="70" height="140"/>
+    <rect x="520" y="300" width="54" height="16"/>
+    <rect x="600" y="268" width="150" height="192"/>
+    <rect x="736" y="330" width="96" height="130"/>
+    <rect x="856" y="300" width="120" height="160"/>
+    <rect x="1000" y="352" width="86" height="108"/>
+    <rect x="1080" y="292" width="132" height="168"/>
+    <rect x="1044" y="272" width="40" height="22"/>
+    <rect x="1240" y="318" width="110" height="142"/>
+    <rect x="1370" y="296" width="146" height="164"/>
+    <rect x="1500" y="344" width="120" height="116"/>
+    <!-- aerial masts -->
+    <rect x="300" y="252" width="5" height="36"/><rect x="640" y="230" width="5" height="40"/>
+    <rect x="1120" y="256" width="5" height="38"/>
+  </g>
+
+  <!-- fog rolling in at the base -->
+  <rect y="330" width="1600" height="130" fill="url(#night)"/>
+</svg>

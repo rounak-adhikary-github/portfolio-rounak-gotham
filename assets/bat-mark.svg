@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bat mark">
+  <title>Bat mark</title>
+  <!-- The reduced bat: same earless, wide-shouldered silhouette as bat.svg but
+       with half the nodes and two scallops per wing, so it still reads as a bat
+       at 14-24px where the full emblem turns to mush. Original artwork. -->
+  <g fill="currentColor">
+    <path d="M256 200
+             L290 176
+             C 360 170, 452 226, 502 292
+             Q 456 320, 430 344
+             L 412 294
+             Q 372 336, 344 363
+             L 320 306
+             Q 290 338, 256 358 Z"/>
+    <path d="M256 200
+             L290 176
+             C 360 170, 452 226, 502 292
+             Q 456 320, 430 344
+             L 412 294
+             Q 372 336, 344 363
+             L 320 306
+             Q 290 338, 256 358 Z" transform="translate(512,0) scale(-1,1)"/>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Bat emblem">
+  <title>Bat emblem</title>
+  <!-- Original bat drawn for this page in the wide, earless, angular idiom of
+       the modern film emblem: one smooth sweep from the centre out to a long
+       point on each side, shallow scallops underneath, and a central tail that
+       dips lower than any of them. Authored as one half and mirrored, so the
+       silhouette is exactly symmetrical.
+
+       This is an original silhouette, NOT a copy or trace of any studio logo —
+       see the README for how to drop in your own artwork instead. Used as a CSS
+       mask, so the colour comes from whatever sits behind it. -->
+  <g fill="currentColor">
+    <path d="M256 196
+             Q 320 156, 386 168
+             L 508 214
+             Q 474 236, 462 250
+             L 448 220
+             Q 418 264, 400 278
+             L 384 234
+             Q 356 276, 338 292
+             L 322 246
+             Q 292 280, 256 330 Z"/>
+    <path d="M256 196
+             Q 320 156, 386 168
+             L 508 214
+             Q 474 236, 462 250
+             L 448 220
+             Q 418 264, 400 278
+             L 384 234
+             Q 356 276, 338 292
+             L 322 246
+             Q 292 280, 256 330 Z" transform="translate(512,0) scale(-1,1)"/>
+  </g>
+</svg>
