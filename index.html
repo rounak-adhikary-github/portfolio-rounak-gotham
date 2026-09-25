@@ -68,6 +68,7 @@
       <a href="#about">Origin</a>
       <a href="#skills">Arsenal</a>
       <a href="#work">Case Files</a>
+      <a href="#projects">Side Cases</a>
       <a href="#education">Training</a>
       <a href="#contact">Secure Line</a>
     </nav>
@@ -206,7 +207,7 @@
       <p class="hint">25 skills · 6 marked <span class="blink">NEW GEAR</span></p>
     </header>
 
-    <div class="filters" role="group" aria-label="Filter skills by category">
+    <div class="filters" data-target="#skillGrid" role="group" aria-label="Filter skills by category">
       <button class="btn chip is-on" data-filter="all" aria-pressed="true">All</button>
       <button class="btn chip" data-filter="core" aria-pressed="false">Languages &amp; Core</button>
       <button class="btn chip" data-filter="backend" aria-pressed="false">Backend &amp; APIs</button>
@@ -387,18 +388,215 @@
     </div>
   </section>
 
+  <div class="divider" aria-hidden="true"><span>Off the clock</span></div>
+
+  <!-- ══════════════ case 04: off the record ══════════════ -->
+  <section id="projects" class="block">
+    <header class="block-head">
+      <h2 class="case-label">Case 04 · Off the Record</h2>
+      <p class="hint">15 side cases · every one of them live</p>
+    </header>
+
+    <p class="lead">
+      Work nobody assigned: civic tools for Kolkata, the storefront and back office for a cloud
+      kitchen, six re-skins of this portfolio, and a couple of things built for family. All of it
+      shipped on GitHub Pages — open one and it runs.
+    </p>
+
+    <div class="filters" data-target="#projectGrid" role="group" aria-label="Filter projects by category">
+      <button class="btn chip is-on" data-filter="all" aria-pressed="true">All</button>
+      <button class="btn chip" data-filter="city" aria-pressed="false">City Tools</button>
+      <button class="btn chip" data-filter="business" aria-pressed="false">Business</button>
+      <button class="btn chip" data-filter="skins" aria-pressed="false">Portfolio Skins</button>
+      <button class="btn chip" data-filter="personal" aria-pressed="false">Personal</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid">
+
+      <!-- ── city tools ── -->
+      <article class="panel card project" data-cat="city">
+        <p class="file-no">SIDE CASE 01 · CITY TOOL</p>
+        <div class="panel-body">
+          <h4>BusBondhu</h4>
+          <p>Every Kolkata bus that runs between two stops — route maps, distance and estimated ride time. No timetables claimed, just what actually runs.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/bus-bondhu/" target="_blank" rel="noopener">Open live <span class="sr-only">— BusBondhu</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="city">
+        <p class="file-no">SIDE CASE 02 · CITY TOOL</p>
+        <div class="panel-body">
+          <h4>Two-Wheeler SOS Map</h4>
+          <p>Breakdown SOS for Kolkata riders: trusted mechanics, spare-part shops, air points, towing and safe parking — one tap to navigate to any of them.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/two-wheeler-sos-map/" target="_blank" rel="noopener">Open live <span class="sr-only">— Two-Wheeler SOS Map</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="city">
+        <p class="file-no">SIDE CASE 03 · CITY TOOL</p>
+        <div class="panel-body">
+          <h4>Night Owl — Kolkata after midnight</h4>
+          <p>A dark-mode, filterable map of 24/7 pharmacies, late-night food, open petrol pumps and late-night transit pickups — real OpenStreetMap places, sorted by nearest to you.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/night-owl-directory-kolkata/" target="_blank" rel="noopener">Open live <span class="sr-only">— Night Owl</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="city">
+        <p class="file-no">SIDE CASE 04 · CITY TOOL</p>
+        <div class="panel-body">
+          <h4>Kolkata SOS Helplines</h4>
+          <p>A one-stop emergency directory for the city: verified government helplines, live hospital and police station locations, and a dedicated women's safety SOS tool.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounakad.github.io/sos-kolkata-helplines/" target="_blank" rel="noopener">Open live <span class="sr-only">— Kolkata SOS Helplines</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <!-- ── business ── -->
+      <article class="panel card project" data-cat="business">
+        <p class="file-no">SIDE CASE 05 · BUSINESS</p>
+        <div class="panel-body">
+          <h4>Babyz Pizza</h4>
+          <p>The cloud kitchen's storefront — menu, the Buy 3 Get 1 Free offer on individual pizzas, WhatsApp ordering and free delivery inside 3 km.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounakad.github.io/BabyzPizza/" target="_blank" rel="noopener">Open live <span class="sr-only">— Babyz Pizza</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="business">
+        <p class="file-no">SIDE CASE 06 · BUSINESS</p>
+        <div class="panel-body">
+          <h4>Babyz Pizza — Revenue &amp; Order Tracker</h4>
+          <p>The kitchen's back office: Swiggy and offline order tracking with revenue and profit analytics, so the numbers come off a screen instead of a notebook.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounakad.github.io/babyz-revenue/" target="_blank" rel="noopener">Open live <span class="sr-only">— Babyz Pizza Revenue and Order Tracker</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <!-- ── portfolio re-skins ── -->
+      <article class="panel card project" data-cat="skins">
+        <p class="file-no">SIDE CASE 07 · PORTFOLIO SKIN</p>
+        <div class="panel-body">
+          <h4>Neo Portfolio</h4>
+          <p>The Neo cut of this portfolio — same résumé, a completely different design language.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounakad.github.io/neo-portfolio-rounak/" target="_blank" rel="noopener">Open live <span class="sr-only">— Neo Portfolio</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="skins">
+        <p class="file-no">SIDE CASE 08 · PORTFOLIO SKIN</p>
+        <div class="panel-body">
+          <h4>Glass Portfolio</h4>
+          <p>The Glass cut of this portfolio — same résumé, a completely different design language.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounakad.github.io/glass-portfolio-rounak/" target="_blank" rel="noopener">Open live <span class="sr-only">— Glass Portfolio</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="skins">
+        <p class="file-no">SIDE CASE 09 · PORTFOLIO SKIN</p>
+        <div class="panel-body">
+          <h4>Neumorph Portfolio</h4>
+          <p>The Neumorph cut of this portfolio — same résumé, a completely different design language.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/portfolio-rounak-neomorph/" target="_blank" rel="noopener">Open live <span class="sr-only">— Neumorph Portfolio</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="skins">
+        <p class="file-no">SIDE CASE 10 · PORTFOLIO SKIN</p>
+        <div class="panel-body">
+          <h4>Y2K Portfolio</h4>
+          <p>The Y2K cut of this portfolio — same résumé, a completely different design language.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/portfolio-rounak-y2k/" target="_blank" rel="noopener">Open live <span class="sr-only">— Y2K Portfolio</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="skins">
+        <p class="file-no">SIDE CASE 11 · PORTFOLIO SKIN</p>
+        <div class="panel-body">
+          <h4>Comic Portfolio</h4>
+          <p>The Comic cut of this portfolio — same résumé, a completely different design language.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/portfolio-rounak-comic/" target="_blank" rel="noopener">Open live <span class="sr-only">— Comic Portfolio</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="skins">
+        <p class="file-no">SIDE CASE 12 · PORTFOLIO SKIN</p>
+        <div class="panel-body">
+          <h4>Gotham Portfolio</h4>
+          <p>The Gotham cut of this portfolio — same résumé, a completely different design language.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/portfolio-rounak-gotham/" target="_blank" rel="noopener">Open live <span class="sr-only">— Gotham Portfolio</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <!-- ── personal ── -->
+      <article class="panel card project" data-cat="personal">
+        <p class="file-no">SIDE CASE 13 · PERSONAL</p>
+        <div class="panel-body">
+          <h4>World Weather Info</h4>
+          <p>Real-time weather, air quality, precipitation and 7-day forecasts for major cities worldwide — every reading shown in that city's own local timezone.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounakad.github.io/world-weather/" target="_blank" rel="noopener">Open live <span class="sr-only">— World Weather Info</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="personal">
+        <p class="file-no">SIDE CASE 14 · PERSONAL</p>
+        <div class="panel-body">
+          <h4>Thailand Trip Planner</h4>
+          <p>Phuket, Krabi and Bangkok: live indicative flight prices, budget-matched hotels aggregated across travel sites, live weather, attractions, maps and a trip cost planner.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/brainstorm/" target="_blank" rel="noopener">Open live <span class="sr-only">— Thailand Trip Planner</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="panel card project" data-cat="personal">
+        <p class="file-no">SIDE CASE 15 · PERSONAL</p>
+        <div class="panel-body">
+          <h4>শুভ বিবাহ · Our Wedding Album</h4>
+          <p>A Bengali wedding album — browse the Bride's Side and Groom's Side photo albums and watch the wedding films.</p>
+          <p class="project-foot">
+            <a class="btn tiny signal" href="https://rounak-adhikary-github.github.io/rounak-soumili-wedding-album/" target="_blank" rel="noopener">Open live <span class="sr-only">— Our Wedding Album</span><span aria-hidden="true"> ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
   <div class="divider" aria-hidden="true"><span>Training montage</span></div>
 
   <!-- ══════════════ case 04: training ══════════════ -->
   <section id="education" class="block">
     <header class="block-head">
-      <h2 class="case-label">Case 04 · Training</h2>
+      <h2 class="case-label">Case 05 · Training</h2>
       <p class="hint">the marks, on the record</p>
     </header>
 
     <div class="cols">
       <article class="panel">
-        <p class="file-no">FILE 04-A · REPORT CARD</p>
+        <p class="file-no">FILE 05-A · REPORT CARD</p>
         <div class="panel-body">
           <table class="marks">
             <caption class="sr-only">Education history with marks</caption>
@@ -428,7 +626,7 @@
       </article>
 
       <aside class="panel">
-        <p class="file-no">FILE 04-B · CERTIFICATIONS</p>
+        <p class="file-no">FILE 05-B · CERTIFICATIONS</p>
         <div class="panel-body">
           <h3>Courses &amp; certifications</h3>
           <ul class="ticks small" role="list">
@@ -486,7 +684,7 @@
       </article>
 
       <aside class="panel">
-        <p class="file-no">FILE 05-B · CHANNELS</p>
+        <p class="file-no">FILE 06-B · CHANNELS</p>
         <div class="panel-body">
           <ul class="contact-list" role="list">
             <li>

@@ -29,6 +29,7 @@
      5  buttons          12  lists / tags / skills     19 cipher + effects
      6  stat meters      13  arsenal grid              20 responsive
      7  noir type        14  cover copy                21 detective, motion, print
+                        13b side cases (projects)
    ============================================================ */
 
 /* ---------------- 1. tokens ---------------- */
@@ -427,6 +428,19 @@ a:hover{color:var(--signal)}
 .card h4{margin:0 0 8px;font-family:var(--display);text-transform:uppercase;letter-spacing:1.6px;font-size:1.02rem;color:#eef2f6}
 .card p{margin:0;font-size:.9rem}
 
+/* ---------------- 13b. side cases (personal projects) ---------------- */
+/* One card per project, one button per card — the live link, nothing else.
+   The category chips above reuse the .filters / .chip markup from the arsenal. */
+.lead{margin:0 0 22px;max-width:80ch;font-size:.96rem}
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(278px,1fr));gap:20px}
+.project{display:flex;flex-direction:column}
+.project .panel-body{display:flex;flex-direction:column;flex:1}
+/* the button sits on the floor of the card, so a row of them lines up however
+   uneven the copy above is (.project .project-foot outranks the .card p margin) */
+.project .project-foot{margin:auto 0 0;padding-top:14px}
+.project-foot .btn{width:100%;justify-content:center}
+.skill.is-hidden,.project.is-hidden{display:none}
+
 /* ---------------- 16. marks table ---------------- */
 table.marks{width:100%;border-collapse:collapse;font-size:.86rem}
 table.marks caption{text-align:left}
@@ -565,8 +579,8 @@ table.marks td b{color:var(--signal)}
   body{font-size:15px}
   .wrap{width:min(1160px,100% - 20px)}
   .masthead-inner{gap:10px;padding:9px 0}
-  .tabs{gap:0;width:100%;order:3;justify-content:center;flex-wrap:nowrap}
-  .tabs a{font-size:.64rem;padding:7px 6px;letter-spacing:.8px}
+  .tabs{gap:0;width:100%;order:3;justify-content:center;flex-wrap:wrap}
+  .tabs a{font-size:.62rem;padding:7px 5px;letter-spacing:.6px}
   .head-tools .btn.tiny{font-size:.6rem;padding:6px 8px}
   .logo-text b{font-size:.95rem}
   .panel-body{padding:15px}
@@ -654,6 +668,11 @@ body.detective .logo-mark{filter:drop-shadow(0 0 14px rgba(255,176,0,.85))}
   .badge-new{animation:none}
   table.marks thead th{background:#fff;color:#000}
   .evidence,.evidence b{border-color:#000;color:#000;text-shadow:none}
+  /* a printed page can't be clicked, so a side case prints its URL instead */
+  .reveal{opacity:1;translate:0 0}
+  .project-foot .btn{width:auto;background:none;border:0;color:#000;padding:0;text-decoration:underline}
+  .project-foot .btn span{display:none}
+  .project-foot .btn::after{content:" " attr(href);font-family:var(--mono);font-size:.72rem}
   .block{padding:12px 0}
   a{color:#000;text-decoration:underline}
 }

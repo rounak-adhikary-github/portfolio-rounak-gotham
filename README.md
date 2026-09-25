@@ -10,7 +10,7 @@ SVG files. It renders identically offline and on GitHub Pages.
 
 ```
 testCode/
-├── index.html                        → the whole page (cover + five case files)
+├── index.html                        → the whole page (cover + six case files)
 ├── css/dark-knight.css               → the noir design system
 ├── js/dark-knight.js                 → clock, typing, reveals, filters, toggles, cipher
 ├── assets/Rounak_Adhikary-Resume.pdf → linked from every "Résumé" button
@@ -126,9 +126,32 @@ records GitHub shows you under *Settings → Pages → Custom domain*.
 | Case 01 · Origin | Prose summary + "Capabilities" list |
 | Case 02 · The Arsenal | Five armouries behind six filter chips, six skills flagged **NEW GEAR** |
 | Case 03 · The Record | Four roles, then six "Signature Cases" |
-| Case 04 · Training | Report card (B.Tech 8.935 CGPA, ISC 84.33%, ICSE 87%) + courses & languages |
-| Case 05 · Secure Line | Form that opens a pre-filled mail draft, plus a channels panel |
+| Case 04 · Off the Record | Fifteen personal projects behind five filter chips — each card carries one **Open live** button and nothing else |
+| Case 05 · Training | Report card (B.Tech 8.935 CGPA, ISC 84.33%, ICSE 87%) + courses & languages |
+| Case 06 · Secure Line | Form that opens a pre-filled mail draft, plus a channels panel |
 | Footer | Skyline, case intake counter, quick links, and a hidden cipher |
+
+### The fifteen side cases
+
+Grouped so the filters mean something: **City Tools** (4), **Business** (2), **Portfolio Skins** (6)
+and **Personal** (3). Every card links straight to the live site on GitHub Pages — deliberately
+**no "view code" button** on any of them.
+
+| # | Project | Live at |
+|---|---|---|
+| 01 | BusBondhu — Kolkata bus companion | `bus-bondhu` |
+| 02 | Two-Wheeler SOS Map | `two-wheeler-sos-map` |
+| 03 | Night Owl — Kolkata after midnight | `night-owl-directory-kolkata` |
+| 04 | Kolkata SOS Helplines | `sos-kolkata-helplines` |
+| 05 | Babyz Pizza — cloud-kitchen storefront | `BabyzPizza` |
+| 06 | Babyz Pizza — Revenue & Order Tracker | `babyz-revenue` |
+| 07–12 | Six re-skins of this portfolio — Neo, Glass, Neumorph, Y2K, Comic, Gotham | `neo-portfolio-rounak`, `glass-portfolio-rounak`, `portfolio-rounak-neomorph`, `portfolio-rounak-y2k`, `portfolio-rounak-comic`, `portfolio-rounak-gotham` |
+| 13 | World Weather Info | `world-weather` |
+| 14 | Thailand Trip Planner | `brainstorm` |
+| 15 | শুভ বিবাহ · Our Wedding Album | `rounak-soumili-wedding-album` |
+
+The card copy is taken from each site's own `<title>` and meta description, not invented — so if a
+project changes its pitch, that is the line to update here.
 
 ### Skills marked NEW GEAR
 
@@ -201,6 +224,8 @@ Everything lives in `index.html`, in plain HTML with comments marking each case.
 | Skills | `.tags` lists inside `#skillGrid`; add `class="is-new"` plus `<span class="badge-new">NEW GEAR</span>`, and set `data-cat` to control which filter shows the panel |
 | Jobs | `.timeline` — one `<li class="panel job">` per role |
 | Signature cases | `.cards` — one `<article class="panel card">` each |
+| Personal projects | `#projectGrid` — one `<article class="panel card project">` each; `data-cat` sets the filter group, the `file-no` strip carries the label, and the single `<a>` in `.project-foot` is the live link |
+| Project categories | The chips in `.filters[data-target="#projectGrid"]` — every `data-filter` value must match a `data-cat` value in the grid (`city` / `business` / `skins` / `personal`) |
 | Report card | `table.marks` (keep the `data-th` attributes — they are the mobile labels) |
 | Courses | `.ticks` inside FILE 04-B |
 | The cipher word | `WORD` near the bottom of `js/dark-knight.js` (default `gotham`) |

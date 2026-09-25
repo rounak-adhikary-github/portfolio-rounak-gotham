@@ -141,14 +141,24 @@
     counters.forEach(function (el) { counted.observe(el); });
   }
 
-  /* ---------------- skill filters ---------------- */
-  var grid = $("skillGrid");
-  var chips = Array.prototype.slice.call(document.querySelectorAll(".chip[data-filter]"));
-  if (grid && chips.length) {
+  /* ---------------- filter chips (arsenal + side cases) ----------------
+     One routine drives every .filters bar: the bar names the grid it controls
+     in data-target, and each card in that grid carries a data-cat. */
+  Array.prototype.slice.call(document.querySelectorAll(".filters[data-target]")).forEach(function (bar) {
+    var target = document.querySelector(bar.getAttribute("data-target"));
+    if (!target) return;
+
+    var chips = Array.prototype.slice.call(bar.querySelectorAll(".chip[data-filter]"));
+    var cards = Array.prototype.slice.call(target.querySelectorAll("[data-cat]"));
+    if (!chips.length || !cards.length) return;
+
     var apply = function (want) {
-      Array.prototype.slice.call(grid.querySelectorAll(".skill")).forEach(function (card) {
+      cards.forEach(function (card) {
         var show = want === "all" || card.getAttribute("data-cat") === want;
         card.classList.toggle("is-hidden", !show);
+        // a card that was display:none at load never reached the reveal
+        // observer, so un-hiding it has to reveal it here as well
+        if (show) card.classList.add("in");
       });
       chips.forEach(function (b) {
         var on = b.getAttribute("data-filter") === want;
@@ -156,10 +166,11 @@
         b.setAttribute("aria-pressed", on ? "true" : "false");
       });
     };
+
     chips.forEach(function (b) {
       b.addEventListener("click", function () { apply(b.getAttribute("data-filter")); });
     });
-  }
+  });
 
   /* ---------------- status toast ---------------- */
   var toast = document.createElement("p");
